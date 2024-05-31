@@ -2,18 +2,27 @@
   "name": "open-delphi-development-system",
   "version": "1.0.0",
   "description": "Open Delphi development system",
+  "main": "build/main.js",
   "scripts": {
     "build": "tsc && copyfiles -f ./index.html build",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "npm run build && electron ./build/main.js",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder build"
+    "start": "yarn run build && electron ./build/main.js",
+    "pack": "yarn build && electron-builder --dir",
+    "dist": "yarn build && electron-builder build"
   },
   "build": {
     "appId": "your.id",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
     "mac": {
-      "category": "your.app.category.type"
+      "category": "guru.konsulent.open-delphi"
     }
   },
   "repository": "https://github.com/stenbror/open-delphi",
