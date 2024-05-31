@@ -9,7 +9,7 @@
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "start": "yarn run build && electron ./build/main.js",
     "pack": "yarn build && electron-builder --dir",
-    "dist": "yarn build && electron-builder build"
+    "dist": "yarn build && electron-builder build -mwl"
   },
   "build": {
     "appId": "your.id",
