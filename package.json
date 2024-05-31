@@ -6,7 +6,15 @@
     "build": "tsc && copyfiles -f ./index.html build",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "npm run build && electron ./build/main.js"
+    "start": "npm run build && electron ./build/main.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder build"
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
   },
   "repository": "https://github.com/stenbror/open-delphi",
   "keywords": [
