@@ -2,6 +2,6 @@
 
 ## Build instructions
 
-yarn run build
-yarn run start
-yarn run dist
+yarn run build  
+yarn run start  
+yarn run dist  
